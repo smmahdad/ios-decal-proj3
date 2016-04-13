@@ -17,6 +17,8 @@
 		3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A81BE9C5A7009F39C5 /* Photo.swift */; };
 		CD9F2FA71CBD754E001A2689 /* PhotoUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F2FA61CBD754E001A2689 /* PhotoUICollectionViewCell.swift */; };
 		CD9F2FA91CBDBB63001A2689 /* DetailedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F2FA81CBDBB63001A2689 /* DetailedPhotoViewController.swift */; };
+		CD9F2FAE1CBDC90C001A2689 /* emptyHeart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD9F2FAC1CBDC90C001A2689 /* emptyHeart.jpg */; };
+		CD9F2FAF1CBDC90C001A2689 /* filledHeart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD9F2FAD1CBDC90C001A2689 /* filledHeart.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		3A1683A81BE9C5A7009F39C5 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		CD9F2FA61CBD754E001A2689 /* PhotoUICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoUICollectionViewCell.swift; sourceTree = "<group>"; };
 		CD9F2FA81CBDBB63001A2689 /* DetailedPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedPhotoViewController.swift; sourceTree = "<group>"; };
+		CD9F2FAC1CBDC90C001A2689 /* emptyHeart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emptyHeart.jpg; sourceTree = "<group>"; };
+		CD9F2FAD1CBDC90C001A2689 /* filledHeart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = filledHeart.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				3A1683A41BE9C548009F39C5 /* Views */,
 				3A1683A11BE9B70C009F39C5 /* Utils */,
 				3A16838F1BE9B642009F39C5 /* AppDelegate.swift */,
+				CD9F2FAC1CBDC90C001A2689 /* emptyHeart.jpg */,
+				CD9F2FAD1CBDC90C001A2689 /* filledHeart.jpg */,
 				3A1683931BE9B642009F39C5 /* Main.storyboard */,
 				3A1683961BE9B642009F39C5 /* Assets.xcassets */,
 				3A1683981BE9B642009F39C5 /* LaunchScreen.storyboard */,
@@ -161,8 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9F2FAE1CBDC90C001A2689 /* emptyHeart.jpg in Resources */,
 				3A16839A1BE9B642009F39C5 /* LaunchScreen.storyboard in Resources */,
 				3A1683971BE9B642009F39C5 /* Assets.xcassets in Resources */,
+				CD9F2FAF1CBDC90C001A2689 /* filledHeart.jpg in Resources */,
 				3A1683951BE9B642009F39C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
