@@ -45,12 +45,7 @@ class PhotosCollectionViewController: UICollectionViewController {
         let nextScreen = segue.destinationViewController as! DetailedPhotoViewController
         if let cell = sender as? UICollectionViewCell {
             let indexPath = collectionView!.indexPathForCell(cell)!
-            let photo = photos[indexPath.row]
-            let url = NSURL(string: photo.url)!
-            nextScreen.image = UIImage(data: NSData(contentsOfURL: url)!)
-            nextScreen.numLikes = photo.likes
-            nextScreen.userName = photo.username
-            nextScreen.date = photo.date
+            nextScreen.originalPhoto = photos[indexPath.row]
         }
     }
 

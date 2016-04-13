@@ -33,7 +33,7 @@ class InstagramAPI {
                 do {
                     let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     // FILL ME IN, REMEMBER TO USE FORCED DOWNCASTING
-                    print(feedDictionary)
+                    
                     for item in feedDictionary["data"] as! [NSDictionary] {
                         photos.append(Photo(data: item))
                     }

@@ -20,11 +20,7 @@ class DetailedPhotoViewController: UIViewController {
     
     @IBOutlet weak var likeButton: UIButton!
     
-    var image : UIImage?
-    var numLikes : Int?
-    var liked : Bool? = false
-    var userName : String?
-    var date : String?
+    var originalPhoto : Photo?
     
     
     override func viewDidLoad() {
@@ -32,31 +28,36 @@ class DetailedPhotoViewController: UIViewController {
         
         self.likeButton.addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
         
-        imageView.image = self.image!
-        likesLabel.text = String(self.numLikes!)
-        //Deal with liked picture
-        userNameLabel.text = self.userName!
+        let url = NSURL(string: originalPhoto!.url)!
+        imageView.image = UIImage(data: NSData(contentsOfURL: url)!)
+        likesLabel.text = String(originalPhoto!.likes)
+        userNameLabel.text = originalPhoto!.username
         
-        var tempStr = String(NSDate(timeIntervalSince1970: Double(self.date!)!))
+        var tempStr = String(NSDate(timeIntervalSince1970: Double(originalPhoto!.date!)!))
         var ind = tempStr.startIndex.advancedBy(5)
         tempStr = tempStr.substringFromIndex(ind)
         ind = tempStr.startIndex.advancedBy(5)
         dateLabel.text = tempStr.substringToIndex(ind)
-        if self.liked! {
+        
+        
+        if originalPhoto!.selfLiked! {
             likeButton.setImage(UIImage(named: "filledHeart.jpg"), forState: .Normal)
             self.likesLabel.text = String(self.numLikes! + 1)
+            originalPhoto!.likes! += 1
         }
         print(dateLabel.text)
     }
     
     func buttonTapped() {
-        self.liked! = !(self.liked!)
-        if self.liked! {
+        originalPhoto!.selfLiked! = !(originalPhoto!.selfLiked!)
+        if originalPhoto!.selfLiked! {
             likeButton.setImage(UIImage(named: "filledHeart.jpg"), forState: .Normal)
-            self.likesLabel.text = String(self.numLikes! + 1)
+            originalPhoto!.likes! += 1
+            self.likesLabel.text = String(originalPhoto!.likes)
         } else {
             likeButton.setImage(UIImage(named: "emptyHeart.jpg"), forState: .Normal)
-            likesLabel.text = String(self.numLikes!)
+            originalPhoto!.likes! -= 1
+            likesLabel.text = String(originalPhoto!.likes!)
         }
         
         
